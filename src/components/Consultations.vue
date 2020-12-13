@@ -2,7 +2,7 @@
   <div id="consultations">
     <Consultation v-for="(consultation, i) in consultations"
                   v-bind:index="i"
-                  v-bind:consultation="consultation" :key="consultation.teacher"
+                  v-bind:consultation="consultation" :key="i"
     ></Consultation>
   </div>
 </template>

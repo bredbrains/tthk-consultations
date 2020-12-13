@@ -1,4 +1,6 @@
-# tthk-consultations
+# TTHK Consultations Web Application
+This is web application, based on Vue.js with consultations at Tallinna Tööstushariduskeskus.
+Data mining based on [TTHK API](https://github.com/bredbrains/tthk-api).
 
 ## Project setup
 ```
@@ -19,6 +21,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

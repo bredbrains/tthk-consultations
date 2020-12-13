@@ -77,4 +77,10 @@ export default {
 .consultation-time > * {
   margin: 0 5px;
 }
+
+@media only screen and (max-width: 750px) {
+  .consultation {
+    width: 100%;
+  }
+}
 </style>

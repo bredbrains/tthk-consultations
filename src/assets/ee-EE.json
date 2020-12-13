@@ -1,0 +1,14 @@
+{
+  "Monday": "Esmaspäev",
+  "Tuesday": "Teisipäev",
+  "Wednesday": "Kolmapäev",
+  "Thursday": "Neljapäev",
+  "Friday": "Reede",
+  "general": "Üldained",
+  "transport": "Transporditehnika",
+  "mechanics": "Mehaanika ja metallitöötlus",
+  "energy": "Energeetika ja automaatika",
+  "infotechnology": "Infotehnoloogia",
+  "logistics": "Logistika",
+  "textile": "Tekstiil ja kaubandus"
+}

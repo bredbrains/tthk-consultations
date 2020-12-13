@@ -144,7 +144,8 @@ footer {
 .none {
   display: flex;
   justify-content: center;
-
+  color: #A22538;
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 750px) {

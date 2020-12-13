@@ -32,7 +32,7 @@
                    v-bind:consultations="filteredConsultations"/>
     <div class="none" v-else>Konsultatsioonid, mis vastavad teie päringule puuduvad.</div>
     <footer class="backgrounded">
-      <p>© Nikolas Laus, 2020</p>
+      <p>© Nikolas Laus, 2020 <a href="https://github.com/bredbrains/tthk-consultations"><i class="fab fa-github"></i></a></p>
     </footer>
   </div>
 </template>
@@ -113,6 +113,12 @@ body {
   font-weight: bold;
   width: 100%;
   box-sizing: border-box;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin-left: 5px;
 }
 
 nav {

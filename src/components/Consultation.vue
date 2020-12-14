@@ -8,6 +8,9 @@
         <span class="room">{{consultation.room}}</span>
         <span class="department">{{estonian[consultation.department]}}</span>
       </div>
+      <div v-if="consultation.email">
+        <a :href="'mailto:' + consultation.email.toLowerCase() + '?subject=Konsultatsioon'" class="email">{{consultation.email.toLowerCase()}}</a>
+      </div>
     </div>
     <div class="consultation-times">
       <div class="consultation-time" v-for="(time, i) of consultation.times" :key="i"
@@ -55,8 +58,12 @@ export default {
 }
 
 .teacher {
-  text-align: center;
   font-weight: bold;
+  color: #A22538;
+}
+
+.email {
+  font-style: italic;
   color: #A22538;
 }
 

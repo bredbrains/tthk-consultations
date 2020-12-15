@@ -28,6 +28,7 @@
       </select>
       <a v-on:click.prevent="clearSearch()" href="#">Kustuta</a>
     </form>
+    <hr>
     <Loader v-if="loading" />
     <Consultations v-else-if="filteredConsultations.length"
                    v-bind:consultations="filteredConsultations"/>
@@ -42,6 +43,7 @@
 <script>
 import Loader from "@/components/Loader";
 import Consultations from "@/components/Consultations"
+// TODO: Switch Element for grid/row switching.
 
 export default {
   name: 'App',
@@ -158,6 +160,7 @@ footer {
 .none {
   display: flex;
   justify-content: center;
+  text-align: center;
   color: #A22538;
   font-weight: bold;
 }
@@ -166,10 +169,16 @@ footer {
   #filter-form {
     flex-direction: column;
     margin: 10px 20%;
+    text-align: center;
   }
 
   #filter-form > * {
     margin-bottom: 3px;
+  }
+
+  label[for='search'] {
+    font-size: 2rem;
+    font-weight: 600;
   }
 }
 </style>

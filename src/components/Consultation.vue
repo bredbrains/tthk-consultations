@@ -77,6 +77,7 @@ export default {
 }
 
 .consultation-times {
+  margin-top: 5px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -85,6 +86,10 @@ export default {
 
 .consultation-time > * {
   margin: 0 5px;
+}
+
+.consultation-time .weekday {
+  font-weight: 500;
 }
 
 @media only screen and (max-width: 750px) {

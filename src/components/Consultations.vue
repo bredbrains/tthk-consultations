@@ -2,8 +2,7 @@
   <div id="consultations">
     <Consultation v-for="(consultation, i) in consultations"
                   v-bind:index="i"
-                  v-bind:consultation="consultation" :key="i"
-    ></Consultation>
+                  v-bind:consultation="consultation" :key="i"/>
   </div>
 </template>
 
@@ -23,6 +22,12 @@ export default {
   #consultations {
     display: flex;
     align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  @media only screen and (max-width: 750px) {
+  #consultations {
     flex-direction: column;
   }
+}
 </style>

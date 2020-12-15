@@ -79,6 +79,8 @@ export default {
 .consultation-times {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .consultation-time > * {

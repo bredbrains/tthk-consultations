@@ -7,10 +7,7 @@
 
 <script>
 export default {
-  name: 'SwitchElement',
-  data() {
-    switchIsChecked: false
-  }
+  name: 'SwitchElement'
 }
 </script>
 

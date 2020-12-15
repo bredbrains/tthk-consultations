@@ -26,6 +26,7 @@
         <option value="energy">Energetika ja automaatika</option>
         <option value="textile">Tekstiil ja kaubandus</option>
       </select>
+      <a v-on:click.prevent="clearSearch()" href="#">Kustuta</a>
     </form>
     <Loader v-if="loading" />
     <Consultations v-else-if="filteredConsultations.length"
@@ -33,6 +34,7 @@
     <div class="none" v-else>Konsultatsioonid, mis vastavad teie päringule puuduvad.</div>
     <footer class="backgrounded">
       <p>© Nikolas Laus, 2020 <a href="https://github.com/bredbrains/tthk-consultations"><i class="fab fa-github"></i></a></p>
+      <p>Built on <a href="https://vuejs.org"><i class="fab fa-vuejs"></i> Vue.js</a> & <a href="https://github.com/bredbrains/tthk-api">tthkAPI</a> with <i class="fas fa-heart"></i></p>
     </footer>
   </div>
 </template>
@@ -69,18 +71,24 @@ export default {
   },
   computed: {
     filteredConsultations() {
+      var currentConsultations = this.consultations;
       if (this.department !== 'all') {
-        return this.consultations.filter(c => c.department === this.department)
+        currentConsultations = currentConsultations.filter(c => c.department === this.department)
       }
-      else if (this.weekday !== 'all') {
-        return this.consultations.filter(c => c.times.some(t => t.weekday === this.weekday))
+      if (this.weekday !== 'all') {
+        currentConsultations = currentConsultations.filter(c => c.times.some(t => t.weekday === this.weekday))
       }
-      else if (this.teacherName !== '') {
-        return this.consultations.filter(c => c.teacher.includes(this.teacherName))
+      if (this.teacherName !== '') {
+        currentConsultations = currentConsultations.filter(c => c.teacher.includes(this.teacherName))
       }
-      else {
-        return this.consultations
-      }
+      return currentConsultations;
+    }
+  },
+  methods: {
+    clearSearch() {
+      this.department = 'all';
+      this.weekday = 'all';
+      this.teacherName = '';
     }
   }
 }

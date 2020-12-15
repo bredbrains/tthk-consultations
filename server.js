@@ -4,6 +4,14 @@ const path = require('path')
 
 const app = express()
 
+var RateLimit = require('express-rate-limit');
+var limiter = new RateLimit({
+  windowMs: 1*60*1000, // 1 minute
+  max: 5
+});
+
+app.use(limiter);
+
 app.use('/', serveStatic(path.join(__dirname, '/dist')))
 
 app.get('/.*/', function(req, res) {

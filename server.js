@@ -18,6 +18,10 @@ app.get('/.*/', function(req, res) {
     res.sendFile(path.join(__dirname, '/dist/index.html'))
 })
 
+app.get('/google82019df1a70977f2.html/') {
+  res.sendFile(path.join(__dirname, '/dist/google82019df1a70977f2.html'));
+}
+
 const port = process.env.PORT || 8080
 app.listen(port)
 console.log(`Application listening on port: ${port}`)

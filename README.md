@@ -1,4 +1,6 @@
 # TTHK Consultations Web Application
+![Uptime Robot ratio (30 days)](https://img.shields.io/uptimerobot/ratio/m786991270-33b65af66bddbfdd409ebe60)
+
 This is web application, built on Vue.js with consultations at Tallinna Tööstushariduskeskus.
 Data mining based on [TTHK API](https://github.com/bredbrains/tthk-api).
 

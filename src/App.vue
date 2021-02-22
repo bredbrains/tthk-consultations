@@ -61,7 +61,7 @@ export default {
     }
   },
   mounted() {
-    fetch('https://tthk-api.herokuapp.com/consultations', {
+    fetch('http://95.181.152.89:1234/consultations', {
       method: 'GET'
     })
         .then(response => response.json())

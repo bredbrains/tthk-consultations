@@ -62,7 +62,7 @@ export default {
     }
   },
   mounted() {
-    axios.get('http://bredbrains.tech/api/consultations')
+    axios.get('https://bredbrains.tech/api/consultations')
         .then(response => {
           let json = response.data
           this.consultations = json.data

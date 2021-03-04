@@ -20,6 +20,7 @@ export default {
 
 <style scoped>
   #consultations {
+    justify-content: center;
     display: flex;
     align-items: center;
     flex-direction: row;

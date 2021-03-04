@@ -61,7 +61,7 @@ export default {
     }
   },
   mounted() {
-    fetch('http://95.181.152.89:1234/consultations', {
+    fetch('http://bredbrains.tech/api/consultations', {
       method: 'GET'
     })
         .then(response => response.json())

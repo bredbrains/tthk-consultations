@@ -43,6 +43,7 @@
 <script>
 import Loader from "@/components/Loader";
 import Consultations from "@/components/Consultations"
+import axios from 'axios'
 // TODO: Switch Element for grid/row switching.
 
 export default {
@@ -61,11 +62,9 @@ export default {
     }
   },
   mounted() {
-    fetch('http://bredbrains.tech/api/consultations', {
-      method: 'GET'
-    })
-        .then(response => response.json())
-        .then(json => {
+    axios.get('http://bredbrains.tech/api/consultations')
+        .then(response => {
+          let json = response.data
           this.consultations = json.data
           this.loading = false
         })

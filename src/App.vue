@@ -80,7 +80,7 @@ export default {
         currentConsultations = currentConsultations.filter(c => c.times.some(t => t.weekday === this.weekday))
       }
       if (this.teacherName !== '') {
-        currentConsultations = currentConsultations.filter(c => c.teacher.includes(this.teacherName))
+        currentConsultations = currentConsultations.filter(c => c.teacher.toLowerCase().includes(this.teacherName.toLowerCase()))
       }
       return currentConsultations;
     }
